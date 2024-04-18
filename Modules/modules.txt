@@ -1,0 +1,17 @@
+Modules
+- A module is an encapsulated and reuseable chunk of code that has it own context
+- In nodejs, each file is treated as a separate module but is isolated by default
+
+Types of Modules
+1. Local Modules : Modules that we create in our application
+2. Built-in Modules : Modules that node.js ships with out of the box
+3. Third party modules : Modules written by other developers that we can use in our application.
+
+Local Modules
+- CommonJS : CommonJS is a standard that states how a module should be structured and shared
+    Node.js adopted CommonJS when it started out and is what is seen in code bases
+
+Loading a Module
+- To load a module into another file, we use the require function
+- When the file is executed, the code in the module is executed as well
+- If the file we are requiring is a javascript file, we can skip specifying the extension and node.js will infer it on our behalf.
