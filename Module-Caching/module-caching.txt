@@ -1,0 +1,9 @@
+Module Caching
+ - caching is or can be refer to another word for remembering
+ - In nodejs when we require a new module, it is loaded and cached for subsequent loading
+ - Caching helps with performance
+
+Seneriors where we need to create seperate instances of SuperHero (class)
+- Instead of exporting an instance that will be import, we export the class itself
+
+NB: Modules imported or exported incorrectly may/can lead to unexpected bugs
