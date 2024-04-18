@@ -1,0 +1,13 @@
+Module Scope : Immediately Invoked Function Expression (IIFE) in Node.js
+- Each loaded module in Node.js is wrapped with an IIFE that provides private scoping of code.
+- IIFE allows the repetition of variables or function names without any conflicts
+
+``````````````````
+    (function(){
+        //Module code actually lives in here
+    })
+````````````````````
+
+- Before a module's code is executed, Node.js will wrap it with a function wrapper that provides module scope
+- This saves us from having to worry about conflicting variables or functions
+- There is proper encapsulation and reusability is unaffected
