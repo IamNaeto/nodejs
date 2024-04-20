@@ -1,0 +1,9 @@
+Import Export Patterns
+1. Exporting and importing a single variable or function
+2. Directly assigning the arrow function to module.exports
+3. Exporting more than one variable or function by either using 
+    - module.exports equals to an object with the functions name inside of it seperated by commas
+    - After enquring the modules with the exported object of variable or function, destructuring can be made to single out the functions or variables.
+4.  Defining the function and directly assigning it to a property on module.exports
+5. Using IIFE that wraps every module in nodejs by replacing module.exports with just exports.
+    -NB: this is not ideal and the best practice is to use module.exports
