@@ -1,0 +1,5 @@
+Module.exports vs exports
+- Using just exports moifies the properties that exist on the exports object
+- From a module, nodejs only returns module.exports and not the exports object. Exports is just a reference to module.exports
+- Although exports is shorter than module.exports, this confussion of attaching to the exports object vs assigning a new object to export is not just worth it.
+- Using module.exports is ideal and the best practice
