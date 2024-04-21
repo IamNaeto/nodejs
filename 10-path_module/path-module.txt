@@ -1,0 +1,34 @@
+Built In Modules
+- This is code that nodejs provide out of a box to help us build applications.
+- The first built in module is the path module
+
+Path Module
+- The path module is a built in moudle that provides utilities for working with file and directory paths.
+- To make use of a built in module, we firt have to import it
+- To import a built in module we use the require() function at the top of the file
+- const path = require("node:path") Here path is the name of the built in module and its prefixed with node to indicate its a built in module.
+- When requiring the built in module, it is important to note that there is no ./ at the beginning
+- Once the module is loaded, the various properties and methods exposed by that module can be accessed
+- The path module has about 14 different properties and methods but there are just 7 that is regularly used.
+- The most readily available is  __filename(double underscore filename) and __dirname(double underscore directory name)
+
+Different Paths Methods Available In The Path Module
+1. Basename : Returns the last portion of a path
+2. Extname : Returns the extension of the path
+3. Parse : Returns an object whose property represents significant elements of the path.
+4. Format : Returns a path string, given an object
+5. isAbsolute : Returns whether a path is absolute or not
+6. Join :  Joins all given path segments together using the platfrom specific seperator as a delimator and then normalizes the resulting path. It accepts one or strings as arguments
+7. Resolve : Resolves sequence of paths or paths segments into an absolute path
+
+
+NB:
+- When importing the built in module, the node prefix is optional
+- Node is smart enough to figure out that the imported module is a built in module
+- However the node protocol has many benefits
+
+node: Protocol
+- Makes it perfectly clear that the import is a Node.js builtin module
+- Makes the import identifier a valid absolute URL
+- Avoids conflicts for future Node.js built-in Modules
+- So, its recommded to always include the node prefix when importing the node.js builtin module
