@@ -1,0 +1,15 @@
+Import JSON
+- JSON stands for JavaScript Object Notation
+- It is a data interchange format commonly used with web servers
+- JSON data is similar to a javascript object but the key is also wrapped with quotes.
+- In nodejs, if a JSON file is imported, the require function will pass the content into a JavaScipt object
+- For JSON files, you can also ignore the .json extension while importing it.
+- The worst case senerior is that nodejs will first try to find the .js of the file you are importing before trying to find the .json of that file. In this case if the .js of the file is to exit in the folder, node will import that file and not the .json file which may lead to issues.
+- Best practice is to use the .json extension when import a json file
+
+Watch Module
+- For example if a statement is logged on the console, everytime a change is made on the file, we will have to re-run node index(file name) to view the output in the terminal.
+- in version 18, node intoduced the watch mode
+- Running in the watch mode restarts the process when there is a change in the imported code
+- To run a file in the Watch mode, in the terminal run the command `node --watch filename` example `node --watch index`
+- The watch mode constantly watches for changes in your code and restarts the process automatically
