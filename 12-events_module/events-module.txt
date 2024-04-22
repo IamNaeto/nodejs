@@ -1,0 +1,10 @@
+Events Module
+- This is the second node.js built in module
+- The events module allows us to work with events in node.js
+- An event is an action or occurance that has happened in our application that we can respond to
+- Using the events module, we can dispatch our own custom events and respond to those custom events in a non-blocking manner
+- The events module returns an event emitter class which we can instantiate to create an emitter object
+- Using the emitter object, we can register event listeners using the on method and emit an event using the emit method
+- The emit method accepts the event name followed by arguments that need to be passed on to the listeners
+- When an event occurs, node automatically calls the listeners for the corresponding event passing in the appropriate arguments.
+- Events allows us to write code in none blocking manner.
