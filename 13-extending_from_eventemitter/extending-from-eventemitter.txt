@@ -1,0 +1,2 @@
+Extending  From EventEmitter
+- In nodejs modules can extend from event emitter allowing them to emit and react to their own custom events.
