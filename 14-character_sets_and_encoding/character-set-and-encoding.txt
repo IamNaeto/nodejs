@@ -1,0 +1,48 @@
+Detour
+- Character Sets
+- Encoding
+- Streams and Buffers
+- Asynchronous JavaScript
+
+Character Sets
+- Binary data
+    * Computers store and represent data in binary format which is a collection of 0s and 1s
+    * Example :  Data       Binary Digits
+                   1            1
+                   2            10                  Using base 2 numeric system, this is how the conversion is done, using 4 as example
+                   2            11                  |   1     0       0        |
+                   4            100                 | 2^2*1 + 2^1*0 +   2^0*0  |
+                   5            101                 | 4     +   0   +    0     |
+                   6            110                 |  = 4                     |    
+                   7            111
+                   8            1000
+                   9            1001
+                   10           1010
+    * Each 0 or 1 is called a binary digit or cbit for short
+    * To work with a piece of data, a computert needs to convert that data into a binary representation
+
+    Character in Binary Format
+    - V in binary format?
+    - Computers will first convert the character to a number, then convert that number to its binary representation.
+    - Therefore, computers will first convert V to a number that represents  V
+    - Typing in the dev tool console "V".charCodeAt() will out put the number of chartacter V as 86
+    - 86 is the numeric representation of the character V
+    - It is also called character code
+    - How does the computer know V should be represented as 86? This brings the topic character sets
+
+    Character Sets
+    - Character set are predefined lists of characters represented by numbers
+    - Popular character sets are 
+        * Unicode and 
+        * ASCII
+    - Unicode character set dictates that 86 should represent character V
+    
+    Character Encoding
+    - Character encoding dictates how to represent a number in a character set as binary data before it can be stored in a computer
+    - It dictates how many bits to use to represent the number
+    - Example of a character encoding is UTF-8
+    - UTF-8 states that characters should be encoded in bytes (8 bits)
+    - Eight 1s and 0s should be used to represent the code of any character in binary
+    - 4 => 100 => 00000100
+    - V => 86 => 01010110
+    - Similar guildelines also exit on how images and videos should be encoded and stored in binary format

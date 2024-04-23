@@ -1,0 +1,1 @@
+console.log("V".charCodeAt()) //prints out the numeric representation of the character V
