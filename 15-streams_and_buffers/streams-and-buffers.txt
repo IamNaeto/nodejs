@@ -1,0 +1,47 @@
+Streams and Buffers
+
+Recap
+- Binary Data : 0s and 1s that computers can understand
+- Character Sets : Predefined lists of characters represented by numbers
+- Character Encoding : Dictates how to represent a number in a character set as binary data
+
+Streams
+- A stream is a sequence of data that is being moved from one point to another over time
+- Ex 1. A stream of data over the internet being moved from one computer to another
+- Ex 2. A stream of data being transferred from one file to another within the same computer
+- In nodejs, the idea is to process streams of data in chunks as they arrive instead of waiting for the entire data to be available before processing
+- Ex 1. Watching a video on youtube
+- The data arrives in chunks and its been watched in chunks while the rest of the data arrives over time
+- Ex 2. Transfering file contents from fileA to fileB
+- The contents arrive in chunks and is been transfered in chunks while the remaining contents arrive over time
+- This helps to prevent unnecessary data downloads and memory usage
+
+Buffers
+* Analogue using a rollercoster
+    - 30 seating capacity
+
+    * Scenario 1
+    - 100 people arrival
+    - 30 people accommodated
+    - 70 people in queue (waiting)
+
+    * Scenario 2
+    - 1 person arrives (waiting : He or she have to wait inline for atleast 10 people to arrive in total to improve efficiency)
+    - Wait for at least 10
+
+* Area where people wait is nothing but the buffer
+* Nodejs cannot control the pace at which data arrives in the stream
+* It can only decide when is the right time to send the data for processing
+* If there is data already processing or too little data to process, node puts the arriving data in a buffer
+* It is an intentionally small area that Node maintains in the runtime to process a stream of data
+* Ex : Streaming a video online
+    - If the internet connection is fast enough when streaming, the speed of the stream will be fast enough to instantly fill up the buffer and send it out for processing
+    - That will repeat till the stream is finished
+    - If the connection is slow, after processing the first chunk of data that arrived, the video player will display a loading spinner which indicates it is waiting for more data to arrive
+    - Once the buffer is filled up and the data is processed, the video player shows the video
+    - While the video is playing, more data will continue to arrive and wait in the buffer
+
+* Binary data, character sets and encoding <==> Buffers? (What is the connection)
+
+* Nodejs provides the buffer as global feature that can be used without having to import it
+* Nodejs internally uses buffers where required making it possible that you may never work with buffers directly
