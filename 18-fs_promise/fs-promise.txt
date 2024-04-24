@@ -1,0 +1,14 @@
+fs Promise
+- fs Promise is the more recent promise based version of fs Module
+- Using the fs Promise module we import it using require("node:fs/promises")
+- The file can be read using the .readFile method
+- Because fs Promise is a promise based version of fs module, we add then and catch blocks
+- Then is called when the promise resolves successfully, we get access to the data which we can log to the console
+- Catch is called when the promise rejects with an error, we get access to the error which we can log again to the console
+- To prove this is asynchronous, log statements can be added before and after
+
+- The promised based fs module can also be used with async await as async await is just a syntactical wrapper of promises.
+- The async await method is relatively easier to read
+
+- The callback based version of the node fs module apis are preferable over the use of the promise apis when maximial performance is required both in terms of execution time and memory allocation.
+- If that is not a major concern, it is therefore recommended to stick to the promise based module
