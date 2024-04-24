@@ -1,0 +1,22 @@
+Streams Recap
+- A stream is a sequence of data that is being moved from one point to another over time
+- Streams in other words allows us to work with chunks of data rather than large amount of data at once
+- Ex: A streeam of data being transfered from one file to another within the same computer
+- The idea is to work with data in chunks instead of waiting for the entire data to be available at once
+- If you are transfering file contents from fileA to fileB, you don't wait for entire fileA content to be saved in temporary memory before moving it into fileB
+- Instead the content is tranfered in chunks over time which prevents unnecessary memory usage.
+- Stream is infact a built-in node module that inherits from the event emitter class
+- Streams is rarely used directly.
+- Other modules internally use streams for their functioning
+- The buffer that streams use has a default size of 64kb
+-  higerWaterMark is use to specifiy the size of chunk of data
+
+Types of Streams
+- Readable streams from which data can be read
+    * Ex: reading from a file as readable stream
+- Writable streams to which we can write data
+    * Ex: Writing to a file as writable stream
+- Duplex streams that are both Readable and Writable
+    * Ex: Sockets as a duplex stream
+- Transform streams that can modify or transform the data as it is written and read
+    * Ex: File compression where you can write compressed data and read de-compressed data to and from a file as a transform stream.
