@@ -18,7 +18,7 @@ Synchronous
     A()
     B()
 
-    ---> Logs A and then Browser
+    ---> Logs A and then B
 
 Blocking
 - This is because of it's synchronous nature

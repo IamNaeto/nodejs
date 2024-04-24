@@ -9,4 +9,4 @@ function B() {
 A()
 B()
 
-// ---> Logs A and then Browser
+// ---> Logs A and then B
