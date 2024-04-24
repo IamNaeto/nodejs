@@ -1,0 +1,34 @@
+fs Module
+- The file system (fs) module allows you to work with the file system on your computer
+- In node, we rely on the fs module to work with the file system
+- The fs modulue, internally uses the buffer
+
+fs Module Methods
+.readFileSync Method
+- Here the surfix Sync entails that the method is a synchronous way of reading a file. In other word, the javacsript engine will wait till the file contents are read before moving on to the next line.
+- Nodejs on its own is asynchronous. It has features to do tasks asynchronously, without blocking the main thread. For this reason another method exist in the fs object which is the .readFile method 
+
+.readFile Method
+- This is the asynchronous method of reading file
+- .readfile method takes two arguments, the first is the file path, the second argument is a call back function which will be invoked after the file content have been read.
+- This call back function receives two parameter, error and data. Error is the error that was identified when reading the file if there was any, if there was no error, it is set to null and data is populated with the file contents
+- This pattern of using callbacks where the first argument is the error is called error first callback pattern. Its commonly used in nodejs
+
+Write File Method
+- The write file method enables us to write content into a file
+- If the file does not exist, a new file is created
+- if the file exist, the contents are over written
+- It has both Sync and Async versions
+
+.writeFileSync Method
+- It takes two arguments
+- First argument is the path to the file
+- Second argument is the file content.
+
+.writeFile Method
+- It takes three arguments
+- First argument is the path to the file
+- Second argument is the file content.
+- Third argument is  the error first call back
+- By default writeFile over writes the file content.
+- To append to the existing content, an option is added as the third argument the file content. Its an object that reset flag as append

@@ -1,0 +1,1 @@
+Currently learning fs module object methods, both the sync and the async version
