@@ -1,0 +1,9 @@
+Pipes
+- Pipes takes a readable stream and connects it to a writeable stream
+- One great thing about a pipe is that it returns a destination stream which enables chaining
+- However the condition is that the destination stream has to be readable, duplex or a transform stream
+
+Zlib Module
+- This provides compression functionality implemented using zlib algorithm.
+- In simpler terns, zlib allows us to create zipped files
+- One greate thing about zlib is that it has a built in transform stream
