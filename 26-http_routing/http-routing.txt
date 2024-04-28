@@ -1,0 +1,7 @@
+HTTP Routing
+- req.url gives us the url credit string
+- We can use it with an if else statment or a switch statment to respond differently
+- The http module gives us access to the request object which inturn gives us access to the url property
+- req.method also gives us access to the http methods such as GET, POST, PUT and DELETE which we can once again use to route diffrent request
+- A combination of req.url and req.method can help in handling any type of routing with the http module
+- However, in the real world app, we typically rely on a web framework to handle all of these.
