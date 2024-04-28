@@ -1,0 +1,15 @@
+HTML Template
+- Previously we learnt how to respond with html
+- We created an html file, use the fs module to read the file content and pipe it as a response
+- Well, this is great for static html pages where the content does not change, however there are situations where we need to add dynamic values into the html
+- For example, we need to display the logged in users name, how do we inject the users name into our html
+- We are going to use the most basic solution which is string replacement
+- For this situation, we use readFileSync as we need to handle this differently
+- Within the request listener, we define a const name and set it to the string of name we want to display
+- In the html file we add, <h1>Hello {{name}}, welcome to Node.js</h1>
+- What we now how to do is replace name in double curly braces with the name constant in our javascript file
+- Using the simple single replacement method
+- Firstly, after reading the file contents and storing it in the html constant. We change the cont to let which stores the file contents
+- Secondly. Update the variable name html to be html.replace, and we are going to replace name inside double curly braces with the name constant
+- Lastly, we now send the updated hmtl variable as response.
+- Save the file, restart node index, refresh the browser and the expected output is displayed.
