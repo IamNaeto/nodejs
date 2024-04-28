@@ -1,0 +1,14 @@
+HTML Response
+- This can be done by wrapping the content of res.end with a html tag
+- Restarting the server and resfreshing the browser shows the output with the hmtl tags at the start and end
+- The reason is because the browser is asked to treat the tresponse as plain text
+- If the browser is to parse this as hmtl, we have to specify content type as text/html
+- Although this works fine, typically we don't build html as a string in the same javascript file, instead we define the hmtl in a seperate file and send that file content as a response
+- Create a hmtl file and put in some html contents
+- To read the contents of the html file in our request listener, we use the fs module
+- Import fs module
+- Within the request listen we use the readFileSync to read the content of the html, specifying the file part and encoding as utf-8 and assign it to a constant variable name. The reason of using the readFileSync instead of readFile because we want to wait for the content of the file to be read before responding
+- Now that we have the file content, we send it as response by passing the variable name to the res.end
+- Although this works, its ideal to keep in mind that readFileSync reads the entire file contents at once. If we have a large html file, we are storing all that content in a temporary buffer which may lead to unnecessaryly use of memory. Instead we may rely on streams
+- This can be done using the .createReadStream method, pass in the path and pipe to the response.
+- Although using absolute path name works, it is ideal to stick to using __dirname together with the path file name instead of using absolute path name
