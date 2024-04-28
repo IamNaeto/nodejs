@@ -1,0 +1,7 @@
+JSON Response
+- JavaScript object or array of object cannot be sent as is in a response
+- What we have to do is to convert it to JSON format
+- JSON stands for JavaScript Object Notation is a data interchange format that we can use with http
+- The nice thing about using json format is that the V8 engine has built in functionality to support what we want to achieve
+- All we have to do is to invoke the built in method JSON.stringify(/Then pass in our object or array of object/)
+- We do however have to specify to the browser that the content type is json by setting the content type to application/json
