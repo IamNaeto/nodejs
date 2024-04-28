@@ -1,0 +1,25 @@
+Creating A Node Server
+- Import the module using require("node:http")
+- Invoke the createServer method on the module to create a server
+- This method accepts a call back function as it's argument
+- This function in turn receives two arguments, request and response
+- HTTP module also extends the event emitter class and the call back function is a request listener. That is when ever a request receahes the server, this call back function is executed.
+- The request argument contains information about the incoming request
+- The response argument or server response is use to build the response that has to be sent back to the client
+- Node will handle the incoming request and we have to write code to send back the response
+- On the response object, we first invoke the writeHead method and specify an argument which is the http status code. This will be 200 for a successful response
+- We can end the response with some text, for that we invoke the end method on the response and pass in a string. Eg. "Hello World"
+- With this, we have written a code to respond any incoming request
+- However we must also inform our server to listen to any incoming request
+- For that we store the server create using the createServer in a constant
+- On the server constant in the next line, we invoke the listen method passing in a port number 3000
+- We can think of a port number as a door number in an aprtment with many houses. On a machine there can be many other servers but our nodejs server runs on port 3000
+- Optionally, we can also specify a call back function for when the server starts to listen and console.log("Server running on port 3000")
+- In the terminal, we can run node index to see the log statement
+- To make a request, we open the browser and type localhost:3000, localhost refer to our own machine which is our server and 3000 is the port number we have specified in our code. Pressing Enter should display "Hello World on the browser
+- Inspecting the browser and opening the network tab, resfresh and there is the request and response
+- It is a good practice to specify the content type of the response
+- Currently we are responding plain text, so we add a second argument to writeHead method, where we specify context type as "text/plain"
+- Restart node index, head to the brwoser and refresh
+- Checking the network tab in the browser inspect, under the response headers will show Content-Type to be text/plain 
+- Although the content type header is technically optional but its recommended to always specify it.
