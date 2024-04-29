@@ -1,0 +1,7 @@
+Web Framework
+- A framework simply abstracts the lower level code allowing us to focus on the requirements than the code itself
+- For example, Angular, React, Vue are all framework/libraries that help us build user interfaces without having to rely on the lower level DOM API in JavaScript
+- Similarly, there are frameworks to build web or mobile applications without having to directly rely on the HTTP module in node.js
+- Example of such frameworks are express, nest, hapi, koa and sails
+- They build on top of the HTTP module making it easier for us to implement all the features
+- Express is a pretty popular node framework
