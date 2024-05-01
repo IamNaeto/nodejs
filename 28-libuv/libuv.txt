@@ -1,0 +1,6 @@
+Libuv
+- Libuv is a cross platform open source library written in C language
+- It handles asynchronous non-blocking operations in Node.js
+- It does this using two very import features namely;
+    * Thread Pool and 
+    * Event Loop
