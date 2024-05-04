@@ -1,0 +1,22 @@
+Microtask Queues 
+- To queue a callback function into the nextTick queue, we use a built in process.nextTick method and this accepts a call back function. The syntax is as follows. 
+            process.nextTick(() => {
+                console.log("This is process.nextTick 1")
+            })
+    * When process.nextTick is executed on the callstack, the pass in callback function will be one queued and the  nextTick queue
+
+- To queue up a callback function into the promise queue, there there are a few different ways of which one othem is Promise.resolve.then with a call back function. When the promise resolves, the function passed into then block is the function that would be queued up in the promise queue. The syntax is as follows.
+            Promise.resolve().then(() =>{
+                console.log("This is Promise.resolve 1")
+            })
+
+- First Experiment Inference: In nodejs, all user written synchronous JavaScript code takes priority over async code that the runtime would like to eventually execute
+- Second Experiment Inference: All callbacks in nextTick queue are executed before callbacks in promise queue
+- Third Experiment Inference: All callbacks in the nexTick queues are executed before all callbacks in the promise queue
+
+Note:
+- The use of process.nextTick is discouraged as it can cause the rest of the event loop to starve
+- If process.nexTick is endlessly called, the control will never make it past the microtask queue
+- There are two main reasons to use process.nexTick
+    1. To allow users to handle errors, cleanup any then unneeded resources, or perhaps try the request again before the event loop continues
+    2. To allow a callback to run after the call stack has unwound but before the event loop continues
