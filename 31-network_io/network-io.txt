@@ -1,0 +1,17 @@
+Network I_O
+- Although both crypto.pbkdf2 and https.request are  asynchronous, https.request method does not seem to use the thread pool
+- https.request does not seem to be affected by the number of CUP cores either
+- https.request is a network input/output operation and not a CPU bound operation
+- It does not use the thread pool
+- Libuv instead delegates the work to the operating system kernel and whenever possible, it will poll the kernel and see if the request has completed
+
+Libuv and Async Summary
+- in nodejs, async methods are handled by Libuv
+- They are handled in two different ways; either
+    1. Native async mechanism   or    2. Thread pool
+- Whenever possible, Libuv will use native async mechanism in the OS so as to avoid blocking the main thread
+- Since this is part of the kernel, there is different mechanism for each OS. We have epoll for Linux, Kqueue fo MacOS and IO Completion Port on Windows.
+- Relying on native async mechanisms makes Node scalable as the only limitation is the operating system kernel 
+- Example of this is a network I/O operation
+- If there is no native async support and the task is file I/O or CPU intensive, libuv uses the thread pool to avoid blocking the main thread
+- Although the thread pool preserves asynchronicity with respect to Node's main thread, it can still become a bottleneck if all threads are busy
