@@ -1,0 +1,50 @@
+Async Code Execution
+- Javascript is a synchronous, blocking, single-threaded language
+- To make async programming possible, we need the help of libuv
+
+Event Loop
+-  Event loop is just a C program and is part of libuv
+- It can also be think as a design pattern that orchestrates or co-ordinates the execution of synchronous and asynchronous code in Node.js
+- How the event loop works is a two step process;
+    1. Visual representation 
+    2. Run a few experiments to better understand the visual representation
+
+Visual Representation
+- The event loop is a loop that is alive as far as the nodejs app is alive and running
+- In every iteration of the loop, we come across six different queues, each queue holds one or more call back functions that needs to be eventually executed on the call stack
+- The type of call back functions is different for each queue
+    * Timer Queue : This contains callbacks associated with setTimeout and setInterval
+    * I/O Queue : This contains callbacks associated with all the async methods in nodejs, example methods associated with fs and http modules
+    * Check Queue : This contains the callbacks associated with a function called setImmediate. This function is specific to node and is not something and not something that can be come across when writing Javascript for the browser
+    * Close Queue : This contains callbacks associated  with the close event of an async task
+    * Microtask Queue : This is actually two seperate queues. The first queue is called nexTick queue and the second is called promise queue
+        - nextTick queue : This contains callbacks associated with a function called process.nextTick which is specific to node.js
+        - promise queue : This contains callbacks associated with the native promise in JavaScript
+- It is important to note that timer, I/O, check and close queues are all part of libuv
+- The two microtask however are not part of libuv. Nevertheless, they are still part of the node runtime and play an important role in the order of execution of callbacks
+
+Event Loop - Execution order
+- All user written synchronous JavaScript code takes priority over async code that the runtime would like to execute
+- Which means only afte the call stack is empty, the event loop comes into picture
+- Within the event loop though, the sequence of execution follows certain rules 
+    1. Any callbacks in the microtask queues are executed. First, tasks in the nexTick queue and only then tasks in the promise queue
+    2. All callbacks within the timer queue are executed
+    3. Callbacks in the microtask queues if present are executed. Again, first tasks in the nexTick queue and then tasks in the promise queue
+    4. All callbacks within the I/O queue are executed
+    5. Callbacks in the microtask queues if present are executed. nextTick queue followed by promise queue
+    6. All callbacks in the check queue are executed
+    7. Callbacks in the micro task queues if present are executed. Again, first tasks in the nextTick queue and then tasks in the promise queue
+    8. All callbacks in the close queue are executed
+    9. For one final time in the same toop, the micro task queues are executed. nextTick queue followed by promise queue
+        - If there are more callbacks to be processed, the loop is kept alive for one more run and the same steps are repeated
+        - On the otherhand, if all callbacks are executed and there is no more code to process, the event loop exits
+
+Questions
+1. Whenever an async task is completed in libuv, at what point does Node decide to run the associated callback function on the call stack?
+Answer: Callback functions are executed only when the call stack is empty. the normal flow of execution will not be interrupted to run a callback function
+
+2. What about async methods like setTimeout and setInterval which also delay the execution of a callback function?
+Answer: setTimeout and setInterval callbacks are given first priority
+
+3. If two async tasks such as setTimeout and readFile complete at the same time, how does Node decide which callback function to run first on the call stack?
+Answer: Timer callbacks are executed before I/O callbacks even if both are ready at the exact same time
