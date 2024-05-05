@@ -1,0 +1,14 @@
+Close Queue
+- Fourthenth Experiment Inference: Close queue callbacks are executed after all other queues callbacks in a a given iteration of the event loop
+
+Event Loop Summary
+- The event loop is a C program that orchestrates or co-ordinates the execution of synchronous and asynchronous code in Node.js.
+- It co-ordinates the execution of callbacks in six different queues
+- They are; nexTick, Promise, Timer, I/O, Check and Close queues
+    * We use process.nextTick() method to queue into the nexTick queue
+    * We resolve or reject a Promise to queue into the Promise queue
+    * We use setTimeout or setInterval to queue into the timer queue
+    * Execute an async method to queue into the I/O queue
+    * Use setImmediate function to queue into the check queue and finally
+    * Attach close event listeners to queue into the close queue
+        - The other of execution follows the same other listed here with an addition point that nexTick and Promise queues are executed in between each queue and also in between each callback execution in the timer and check queues.
