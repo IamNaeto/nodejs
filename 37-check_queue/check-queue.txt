@@ -1,0 +1,5 @@
+Check Queue
+- Tenth Experiment Inference: Check queue callbacks are executed after Microtask queues callbacks, Timer queue callbacks and I/O queue callbacks are executed
+- Eleventh Experiment Inference: Microtask queues cakkbacks are executed after I/O callbacks and before check queue callbacks.
+- Twelfth Experiment Inference: Microtask queues callbacks are executed in between check queue callbacks
+- Thirteenth Experiment Inference: When running setTimeout with delay 0ms and setImmediate method, the order of execution can never be guaranteed. Adding a time consuming for loop can help guarante the order of execution.
