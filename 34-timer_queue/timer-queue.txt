@@ -1,0 +1,13 @@
+Timer Queue 
+- Timer queue is technically not a queue, it is a main heap data structure, but for our understanding thinking its a queue makes the process simplier
+- To queue a timeout function into the timer queue, we can use either the setTimeout function or the setInterval function
+- Here is the syntax for setTimeout
+            setTimeout(() =>{
+                console.log("This is setTimeout 1")
+            }, 0);
+        * The first argument is a callback function
+        * The second argument is the delay
+
+- Third Experiment Inference : Callbacks in the microtask queues are executed before callbacks in the timer queue
+- Fourth Experiment Inference : Callbacks in microtask queues are executed in between the execution of callbacks in the timer queue
+- Fifth Experiment Inference : Timer queue callbacks are executed in FIFO order
