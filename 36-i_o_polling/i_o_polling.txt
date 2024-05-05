@@ -1,0 +1,8 @@
+I/O Polling
+- To queue a callback function into the check queue, we can use a function called setImmediate
+- The syntax is similar to process.nexTick were we pass in a call back function
+- The syntax is showed thus :
+            setImmediate(() => {
+                console.log("This is setImmediate 1")
+            })
+- Ninth Experiment Inference: I/O events are polled and callback functions are added to the I/O queue only after the I/O is complete
