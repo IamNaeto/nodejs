@@ -1,0 +1,9 @@
+I/O Queue
+- To queue a callback function into the I/O queue, there are a number of methods. Most of the async methods from the built in modules queue the callback function in the I/O queue
+- One of the async method is the readFile method from the fs module
+
+- Sixth Experiment Inference: Callbacks in the microtask queues are executed before callbacks in the I/O queue
+- Seven Experiment Inference: When running setTimeout with delay 0ms and an I/O async method, the order of execution can never be guaranteed.
+    * Why can the order of execution never be guaranteed?
+        - The anormally is because of how a minimum delay is set for timers
+- Eight Experiment Inference: I/O queue callbacks are executed after Microtask queues callbacks and Timer queue callbacks
