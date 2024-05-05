@@ -20,7 +20,7 @@ To get started with this repository, follow these steps:
 2. **Navigate to the topic of interest:**
    Explore the repository's directory structure to find topics categorized by complexity and functionality.
 
-3. **Read the README and code comments:**
+3. **Read the text files and code comments in the script files:**
    Each topic folder contains a .txt file with instructions and explanations and script files with codes and comments for further explanations. Dive into the code and comments to understand the concepts better.
 
 ## Repository Structure
