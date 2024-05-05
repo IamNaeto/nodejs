@@ -1,9 +1,11 @@
-Got it! Here's a revised README template tailored to cover a range of Node.js topics from introductory to advanced levels:
+## Node.js For Backend
+
+![image](https://github.com/IamNaeto/nodejs/assets/105589308/afb5b19e-8f29-44fa-b032-e77d2649c8cc)
 
 ```markdown
-# Node.js Topics Repository
+# Node.js Learning Topics
 
-Welcome to the Node.js Topics Repository! This repository covers a wide range of Node.js topics from introductory to advanced levels, making it a comprehensive resource for learning and mastering Node.js development.
+Welcome to my Node.js Learning Topics Repository! This repository covers a wide range of Node.js topics from introductory to advanced levels, making it a comprehensive resource for learning and mastering Node.js development.
 
 ## Getting Started
 
