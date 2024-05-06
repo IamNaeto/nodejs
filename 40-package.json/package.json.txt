@@ -1,0 +1,23 @@
+package.json
+- package.json is npm's configuration file
+- It is a json file that typically lives in the root directory of your package and holds various metadata relevant to the package
+- package.json is the central place to configure and describe how to interact with and run your package
+- It is primarily used by the npm CLI
+
+Fields in the packgae.json file
+- The file begins with a pair of curly braces and inside of it, we have the Fields
+- There are two mandatory fields, name and version
+    * name field defines the name of the package. It must be lower case, one word and may contain hypens or underscores
+    * version field must be in form x.x.x and follows the symantics versioning guildlines
+- Other fields are;
+    * description field that is used to search and describe packages in the npm registry
+    * keyword fields is an array of strings. It is indexed by the npm registry that helps to find packages when someone searches for them
+    * main field defines the entry point of our projects
+
+Note: 
+- We don't have to manually create the package.json file. Typically we use the npm CLI to initialze a project with package.json
+- To create a package.json using the npm CLI, on the terminal run;
+    * npm init     
+- If you want to stick to the default and just change the project name, you can use the --yes option. So in the terminal run the command;
+    * npm init --yes 
+    * This will generate a package.json file with the default values without prompting for any user input
