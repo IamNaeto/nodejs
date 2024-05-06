@@ -1,0 +1,37 @@
+npm
+- What is npm
+    - npm is really two things
+        * It is the world's largest software library(registry)
+        * It is a software package manager
+
+npm is a Software library
+- A book library contains books written by various authors
+- npm is a library or a registry which contains code packages written by various developers
+- It is a large public database of JavaScript code that developers from all over the world can use to share and borrow code
+- If you author a "code package", you can publish it to the npm registry for others to use
+- On the other, if you come across a code package that is authored by someone else and solves the problem you have at hand, you can borrow that code without having to reinvent the wheel
+- Visiting npmjs.com leads to the npm website where one can search for package in the registry
+
+npm is a Software Package Manager
+- Developers publish and consume code packages
+- But there is a there is a lot to consider while building a system around that
+    * How does a developer publish a package
+    * How does a developer consume a package
+    * What happens if the code package author decides to change a function name in a package
+    * How would one update an already installed package?
+    * What if the package I am consuming is dependent on another package?
+        - Managing packages in a project as one can see is not as simple as it seems. This is where npm as a package manager comes to the rescue
+        - We have access to a command line interface tool that lets us manage packages in a project
+
+npm and Other Package Managers
+- Other package managers are pnpm and Yarn
+- npm is the default package manager for node.js and is installed when nodejs is installed
+- To verify if npm is installed, in the terminal run npm -v
+- There is no need for seperate installation because it is bundled with nodejs
+
+npm
+- npm did stands for node package manager when it first started out
+- Now, it is a package manager for the JavaScript programming language
+
+Why learn about npm?
+- When building enterprise scale applications, we often need to reply on code written by other developers, we need npm
