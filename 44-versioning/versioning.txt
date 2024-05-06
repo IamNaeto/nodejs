@@ -1,0 +1,37 @@
+Versioning 
+- npm install command always installs the latest stable version
+- You can however specify the version number when installing a package using 
+    * npm install package-name@version
+    * Eg. npm install upper-case@2.0.0
+- A good use case for installing a specific version is that when the latest version contains a bug that have been over looked by the maintainers, you can install an earlier version, start using it and update when the latest version have been patched
+- Re-run npm install package name and the latest version will be reinstalled
+    * Eg. npm install upper-case
+- The version number is normally represented as three digits with a dot seperator because npm adopt what is known as semantic versioning
+
+Semantic Versioning
+- Semantic versioning also known as SemVer is one of the most widely adopted versioning systems
+- It is a simple set of rules and requirements that dictate how version numbers are assigned and incremented
+- In todays world of web development, new packages are being created every single day, all of them as point time in time undergoes a change and its is crucial to keep a semantic and historical track of changes
+- Version numbers and the way they change convey meaning about the underlying code and what has been modified from one version to the next.
+- A semantic version is of the format, X.Y.Z where X stands for a major version, Y stands for a minor version and Z stands for a patch. 
+- Example upper-case version 2.0.2 indicates a major version 2, a minor version 0, and a patch version 2
+
+Versioning Rules
+- When you fix a bug and the code stays backwards-compatible you increment the patch version.
+- For example 1.1.1 to 1.1.2
+
+- When you add new functionality but the code still stays backwards compactible, you increment the minor version
+- You also reset the patch version to zero
+- For example, 1.1.1 to 1.2.0
+
+- When you make changes and the code is no more backwards compactible, you increment the major version
+- You have to reset the minor and patch version to zero
+- For example 1.1.1 to 2.0.0
+
+- This semantic increment will help users to make decisions regarding their project
+
+Few More Points
+- Semantic versioning always starts with 0.1.0 and that is because it never starts with a patch on a brand new package
+- 0.Y.Z(a major version of zero) is used for initial development
+- When the code is production ready, you increment to version 1.0.0
+- At any point in time, even the simplest of changes has to be done with an increase in the version number
