@@ -1,0 +1,9 @@
+Dependencies
+- Dependencies field is normally created and populated when a package is installed
+- It is a way for the npm to track the packages that are required for the function of our code 
+- In a real world application, the dependencies list might contain anywhere between 5 and 50 different npm package.
+- All the code will be present in the node modules folder and this folder can be megabyte in size
+- Instead of commiting this folder to source control, we will git ignore it
+- That is when another developer in our team clones the code, the will not have the node modules folder
+- npm install scans package.json for any dependencies and automatically install then and aswell regenerate the modules folder if not available initially
+- These are the role of the dependencies field in package.json configuration file 
