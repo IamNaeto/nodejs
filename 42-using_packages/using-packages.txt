@@ -1,0 +1,8 @@
+Using Packages
+- Any package installed is basically a module in node.js
+- Importing a loacla modue we use require("./path-to-module")
+    * E.g const localModule = require("./path-to-module")
+- Importing a  builtin module we use require("mode:fs")
+    * E.g const fs = require("node:fs")
+- Importing a third party module example uppercase module using commonjs, we use require("upper-case").upperCase. This however imports everything that is exported from the package
+    * Then we can invoke the upperCase("passing in the strings we want to convert to uppercase using the uppercase package")
