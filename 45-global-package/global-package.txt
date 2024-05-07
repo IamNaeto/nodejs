@@ -1,0 +1,20 @@
+Global Package
+- Some packages published to the npm registry are meant to be used as stand alone command line applications
+- Such packages are intended to be run from a terminal and used directly in code like a local dependence will be
+- On the frontend, a good example is the create-react-app command line application which is used to start out a react project
+- For nodejs, a very popular globally installed package isnodemon
+- It is a simple monitor script for use during development of a nodejs app
+- It automatically restarts the node application when file changes in the directory are dictected
+- Nodemon is a package intended to be used from the terminal
+- It can be found in the npmjs.com website
+- The command to install is npm instal -g nodemon
+- The option -g instruct npm to install the package globally to your system path
+- That will allow us to run the package from the command line regardless of where you run the command from
+- Once the installation is complete you can run nodemon filename to monitor
+    * Example nodemon index.js
+- It is important to note that global packages are not listed as a dependence for a single project and because of this running npm install will not install the package
+- Global packages have to be installed on there own by every single developer in the terminal
+- On a side note, to uninstall a global package, run 
+    * npm uninstall -g package name
+    * Example npm uninstall -g nodemon
+- Global packages are primarily utilities and tools written in nodejs which can help us during development
