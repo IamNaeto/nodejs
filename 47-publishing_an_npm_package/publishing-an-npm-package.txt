@@ -1,0 +1,14 @@
+Publishing An NPM Package
+- To publish a package, you just have to run one command
+- npm publish
+- However before doing that, you need to create an account on npmjs and sign into the account in vscode
+- First head over to npmjs.com and click on signup
+- Enter a username, email and password
+- An OTP will be sent to your email which you will need to enter in the next screen
+- Once this is successfully done, head back to vscode
+- In the terminal run the command npm space adduser <username>. This is the same username you would have entered on npmsjs
+- When you press enter it will prompt you for password and email address
+- Once you have successfully completed that step, you are ready to publish your package
+- In the terminal run the command npm publish
+- If it succeeds you can head over to https://npmjs.com/package/package_name
+- For example, from our package.json our package name is first-published-package. soo the route to head over to will be https://npmjs.com/package/first-published-package
