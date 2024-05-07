@@ -1,0 +1,7 @@
+npm Scripts
+- An npm Scripts is a convinent way to bundle common commands for use in a project
+- They are typically entered in the command line in order to do soemthing with the application
+- npm scripts are stored in a projects package.json file, giving access to everyone who has access to the codebase
+- They also ensure that everyone is using the same command with the same options
+- Common use case for npm scripts include building your project, starting a development server, compiling CSS, linting, minifying etc
+- npm scripts are executed using the command npm run <SCRIPT_NAME>
