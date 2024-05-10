@@ -1,0 +1,16 @@
+Building CLI Tools
+- CLI stands for Command line Interface
+- it is a program that you can run from the terminal 
+- Two popular CLI are npm and getElementById
+
+Creating CLI Tool Using Node and NPM
+- Creating a CLI is similar to creating an NPM package with a few extra steps
+- Step 1: Initialize a new npm project with the command npm init --yes
+- Steps 2: In the package.json file, change the project name to your prefered name. E.g I am using charles-pokedex
+- Do make sure your package name is unique. NPM will not allow you to publish to the registry if a package already exist with the same name.
+- Step 3: Create a file and write the code to execute when the CLI is ran
+- Step 4: Convert this package into a CLI and that requires two additions
+    * First in index.js, at the top add #!/usr/bin/env node. This is called hashbang or shebang which tell the operating system which interpreter to use. In this case, node is specified as the interpreter and the location where node is installed
+    * Second in package.json we add a new field called bin. The bin allows us to treate our package as an executable file which can be installed into the path variable. The value is an object which contains key value pairs. As key we specify the command we want to execute to run our CLI. The value to this key is an entry point to the CLI, that can be index.js
+- Step 5: To text it as a CLI, we need to install this package by running the command npm install -g. This installs our CLI tool globally 
+- Once the command is complete, run the name of the package.json on the terminal Eg: charles-pokedx, press enter and the text from the index/entry file will log on the terminal
