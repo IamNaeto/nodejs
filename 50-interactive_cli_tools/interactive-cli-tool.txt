@@ -1,0 +1,9 @@
+Interactive CLI Tools
+- Firstly, comment out code related to the yargs package as we do not intend to pass in any option
+- Install an npm package that allows us to add interactivity to our CLI. There are alot of tools out there, one of them is inquirer and can be installed using npm install inquirer@8.2.5. Version 9 only works with ES modules, while version 8 also support commonJS modules format.
+- Import and use the package in index.js
+- After the printFiveMoves function, add  the code related to interactivity
+- First we create a prompt module using the inquirer.createPromptModule
+- Invoke this prompt function returned from createPromptModule
+- To this function, we pass in an array of questions we want to ask the user. Each question is an object to this array. We specify type which is input, name which is for the question and message, which is the actual message the user sees. When the user replies with an answer to the question, it is returned back for processing.
+- Prompt returns a promise, so we use the .then block to capture and use the answer.
