@@ -12,5 +12,5 @@ Creating CLI Tool Using Node and NPM
 - Step 4: Convert this package into a CLI and that requires two additions
     * First in index.js, at the top add #!/usr/bin/env node. This is called hashbang or shebang which tell the operating system which interpreter to use. In this case, node is specified as the interpreter and the location where node is installed
     * Second in package.json we add a new field called bin. The bin allows us to treate our package as an executable file which can be installed into the path variable. The value is an object which contains key value pairs. As key we specify the command we want to execute to run our CLI. The value to this key is an entry point to the CLI, that can be index.js
-- Step 5: To text it as a CLI, we need to install this package by running the command npm install -g. This installs our CLI tool globally 
-- Once the command is complete, run the name of the package.json on the terminal Eg: charles-pokedx, press enter and the text from the index/entry file will log on the terminal
+- Step 5: To test it as a CLI, we need to install this package by running the command npm install -g. This installs our CLI tool globally 
+- Once the command is complete, run the bin name of the package.json on the terminal Eg: charles-pokedx, press enter and the text from the index/entry file will log on the terminal
