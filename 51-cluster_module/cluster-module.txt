@@ -1,0 +1,22 @@
+Cluster Module
+- Node is single threaded
+- Which means no matter how many cores you have, node only uses a single core of your CPU
+- This is fine for I/O operations but if the code has long running and CPU intensive operations, your application might struggle from a performance point of view
+- To help with this, node introduced the cluster module
+- The cluster module enables the creation of child processes (also called workers) that run simultaneously
+- All created workers share the same server port
+
+How The Cluster Module Works in Nodejs
+- When we run node index in the terminal, the file is treated as a Cluster Master and this master is incharge of sponning new workers which run an instance of our node application
+- The master is only incharge of the workers, starting, stopping, restarting, etc but does not execute the application code itself. It is not incharge of handling incoming requests, reading files etc. That is up to individual workers itself.
+- Each worker gets its own event loop, memory, and V8 instance. In doing so we are able to share the work load across different instances without having to block incoming request.
+
+- To create new workers from the master, we use the fork method on the cluster object
+- The master is incharge of creating workers and the workers are incharge of handling the incoming request
+- It is very important to create two worker threads at minimum. If you create only one, it is the same thing as no cluster
+- We should only create as many workers as there are CPU cores on the machine the app is running
+- If we create more workers than there are logical cores on the computer it can cause an overhead as the system will have to schedule all the created workers with fewer number of cores
+- To verify how many workers we can create, we use the OS module
+
+- pm2 is an npm package that runs application as a cluster and also decide the best number of workers to create for your machine
+- The command is npm install -g pm2. -g is required as we intend to run it from the command line
