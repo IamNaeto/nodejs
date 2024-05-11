@@ -1,0 +1,5 @@
+CLI Options
+- The way to pass argument to a CLI tool is to pass a CLI Options
+- Yargs converts options to two value pairs that we can easily access in our code
+- It can be installed using npm install yargs
+- Yargs simply allows us to easily retrive the pokemon option value
