@@ -1,0 +1,14 @@
+Wrapping Up
+* Topics Covered
+    - What is nodejs
+    - User defined modules
+    - Built-in modules such as path, fs, events and http
+    - Internals of nodejs such as Libuv, threadpool and event loop
+    - npm and working with thirdparty modules
+    - Building command line interface tool (CLI) using node and npm
+    - Misc topics such as clusters, workers thread and deploying a nodejs application
+
+Further Learning
+- Express.js : A web framework built on top of nodejs
+- Jest or Vitest : For writing unit test
+- Typescript : Adding types to nodejs app will greatly reduce the number of bugs you might come across and refactoring becomes a whole lot easier.
