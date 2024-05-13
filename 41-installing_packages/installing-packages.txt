@@ -1,0 +1,13 @@
+Installing Packages
+- Head to npmjs.com and search for the package you want and select it
+- Access if it is a good package for your project using the following rules
+    * Publish Date : The date should be less than a year to the current year
+    * Weekly downloads metic: Should be in millions, or few hundreds thousands
+    * Package size: Large package size isnt good. The lower the size the better it is for your project. There is never a fixed packgae size but a few kiliobytes is nothing to worry about.
+    * Good documentation and fewer issues
+- Install the packages using npm CLI. Copy the installation code and paste in your terminal. Eg. npm install upper-case
+- After running the command a progress bar will appear as npm fetches the package, the package will be downloaded from the registry and install in a folder called node modules
+- In package.json, a dependences field will be created and updated with the package name and installed version
+- A package-lock.json file will be created  whenever you add your first dependences, subsequently the same file will be updated. This file simply keeps track of the packages and version installed in a project ensuring there is no inconsistency when some else installs the same packages.
+-To uninstall a package, on your terminal run npm uninstall followed by the name of the package name
+    * E.g npm uninstall upper-case
