@@ -19,3 +19,11 @@ Asynchronous Callbacks
 - In the async world, callbacks are used to delay the execution of a function until a particular time or event has occured
 - This use case is really important because most of the modules in node.js have an asynchronous nature to prevent blocking of execution.
 - For example, reading data from a file, fetching data from a database or handling a network request
+
+Asynchronous Callbacks in Browser
+function callback(){
+    document.getElementById("demo").innerHTML = "Hello World";
+}
+document.getElementById("btn").addEventListener("click", callback)
+
+- Here the execution of the callback function is delayed untill an event occurs in the browser and that event is the click event
