@@ -1,0 +1,22 @@
+Deploying Nodejs App
+- Heroku (paid)
+- Render
+- Fly.io
+
+Using Render
+- Ensure your code is pushed to github
+- Head over to render.com and click on get started for free if new to render
+- Once signed in, you arrive at the dashbord package
+- To deploy a nodejs  application, click on the new web server button under the webservices option
+- Connect to your github account by clicking on the corresponding button
+- Enter your credentials and authorize render
+- You can give permission to all your github repositories or only selected repositories. Soo its best to give permission to a selected repositories you want to deploy
+- Github might ask for further authentication, complete it
+- Once render is installed in the repo, you will be redirected back to render.
+- Click on new web services button again and this time conect to the nodejs repo
+- Here we need to enter few details. First we enter a unique name for our services. The region and branch can be left as it is. Set the root directory to the folder that contents the code you want to host. Leave environment as it is.  For built command you could leave yarn as the default but if you are not okay with yarn it is npm install. You also set the start command. Example node index.js
+- Scroll down and relieve the selected plan as free
+- Click on advanced button and add an enviroment variable. The key is PORT in upper case and the value is 3000
+- We can leave everything as it is, scroll down to the bottom and click on create web servers
+- The deployment will be kick started
+- When done deploying, a generated link will be made available, clicking on it will open the node app responding.
