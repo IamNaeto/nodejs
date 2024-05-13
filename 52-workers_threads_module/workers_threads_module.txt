@@ -1,0 +1,6 @@
+Workers Threads Module
+- The worker threads module enables the use of threads that executes JavaScript in parallel
+- Code executed in a worker thread runs in a seperate child process, preventing it from blocking your main application
+- It is different from the cluster module because the cluster module can be used to run multiple instances of Node.js that can distribute workloads
+- Worker thread on the other hand allows running multiple application threads within a single Node.js instances
+- When process isolation is not needed, that is no separte instances of V8, event loop and memory are needed, you should use worker threads
