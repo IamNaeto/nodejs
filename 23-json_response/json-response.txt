@@ -5,3 +5,4 @@ JSON Response
 - The nice thing about using json format is that the V8 engine has built in functionality to support what we want to achieve
 - All we have to do is to invoke the built in method JSON.stringify(/Then pass in our object or array of object/)
 - We do however have to specify to the browser that the content type is json by setting the content type to application/json
+- All these are sufficient to send a json response back to the client
